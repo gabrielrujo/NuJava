@@ -34,8 +34,8 @@ Durante o desenvolvimento deste desafio, foram aplicados os seguintes conceitos:
 
 ```java
 // Criando contas
-ContaBancaria c1 = new ContaBancaria("Gabriel Teixeira", 1000.0);
-ContaBancaria c2 = new ContaBancaria("Fernanda Kipper", 0.0);
+ContaBancaria c1 = new ContaBancaria("Gabrielujo", 1000.0);
+ContaBancaria c2 = new ContaBancaria("Ana Clara", 0.0);
 
 // Realizando operações
 c1.sacar(100.0);
