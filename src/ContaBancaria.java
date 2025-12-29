@@ -1,13 +1,15 @@
-public class ContaBancaria {
-    private String Titular;
+// classe
+public abstract class ContaBancaria {
+// atributos da classe ContaBancaria
+    private String titular;
     private double saldo;
 
     public String getTitular() {
-        return Titular;
+        return titular;
     }
 
     public void setTitular(String titular) {
-        Titular = titular;
+        titular = titular;
     }
 
     public double getSaldo() {
@@ -17,17 +19,17 @@ public class ContaBancaria {
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
-
+// metodo construtor
     public ContaBancaria(String Titular, double saldo) {
-        this.Titular = Titular;
+        this.titular = Titular;
         this.saldo = saldo;
     }
-
+// metodo depositar
     public double depositar(double valor){
         saldo = saldo + valor;
         return saldo;
     }
-
+// metodo sacar
     public double sacar(double valor){
         if (saldo < valor){
             System.out.println("Saldo insuficiente");
@@ -35,11 +37,11 @@ public class ContaBancaria {
         } else {
             this.saldo = saldo - valor;
             System.out.println("Sacou: " + valor);
-            System.out.println("Saldo atual: ");
+            System.out.println("Saldo atual: " + this.saldo);
             return saldo;
         }
     }
-
+// metodo transferir
     public void transferir(double valor, ContaBancaria contaDestino) {
         if  (saldo < valor){
             System.out.println("Saldo insuficiente");
